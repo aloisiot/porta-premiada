@@ -1,24 +1,10 @@
-import Porta from "../components/Porta";
-import { useState } from "react";
-import { atualizarPortas, criarPortas } from "../functions/portas.";
+import Link from "next/link"
 
-export default function Home() {
-  const [portas, setPortas] = useState(criarPortas(3,2));
-
-  function RenderPortas(){
+export default function Home(){
     return (
-      <ul style={{display: 'flex', listStyle: 'none'}}>
-        {portas.map(porta => {
-          return <Porta key={porta.numero} porta={porta}
-            onChange={portaCorrente => setPortas(atualizarPortas(portas, portaCorrente))}/>
-        })}
-      </ul>
+        <>
+            <h1>Home</h1>
+            <Link href="/jogo">Jogo</Link>
+        </>
     )
-  }
-
-  return (
-    <div>
-      <RenderPortas/>
-    </div>
-  )
 }

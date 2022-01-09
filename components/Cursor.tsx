@@ -11,21 +11,20 @@ export default function Cursor({visible}: Props){
 
     const [x, setX] = useState(0);
     const [y, setY] = useState(0);
-
-    const positionHandler = (e) => {
-        setX(e.clientX)
-        setY(e.clientY)
-    }
-
+    
     useEffect(() => {
         window.addEventListener("mousemove", positionHandler)
     })
+    
+        const positionHandler = (e) => {
+            setX(e.clientX)
+            setY(e.clientY)
+        }
 
     const position = {
         top: y + 1,
         left: x + 1
     }
-
 
     return (
         <div className={styles.cursor}

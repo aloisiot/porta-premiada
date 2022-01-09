@@ -16,10 +16,10 @@ export default function Cursor({visible}: Props){
         window.addEventListener("mousemove", positionHandler)
     })
     
-        const positionHandler = (e) => {
-            setX(e.clientX)
-            setY(e.clientY)
-        }
+    const positionHandler = (e) => {
+        setX(e.clientX)
+        setY(e.clientY)
+    }
 
     const position = {
         top: y + 1,

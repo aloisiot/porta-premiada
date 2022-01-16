@@ -34,7 +34,7 @@ export default function Home(){
                         onChange={(novaQtd) => setPortaPremiada(novaQtd)}
                     />
                 </Cartao>
-                <Cartao bgColor={"#c0392c"}>
+                <Cartao bgColor={"#0A8A62"}>
                     <Link href={`/jogo/${qtdPortas}/${potaPremiada}`} passHref>
                         <h2 className={styles.link}>Iniciar</h2>
                     </Link>
